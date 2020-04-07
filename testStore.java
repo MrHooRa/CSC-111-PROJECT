@@ -1,3 +1,9 @@
+/*
+* Salman Alessa
+* UID: 439100011
+*/
+
+// Packages
 import java.util.Scanner;
 public class testStore {
 	static Scanner input = new Scanner(System.in);
@@ -35,9 +41,9 @@ public class testStore {
 			total = total + objDairy.discountDairy(objDairy.calcDairyPrice(priceMilk, priceCheese, priceButter), age);
 
 			Dairy = objDairy.printDairy();
-			options(age, priceMilk, 
-					priceCheese, priceButter, priceMuffins,
-					priceCroissants, priceBiscuits);
+			options(age, 
+					priceMilk, priceCheese, priceButter, 
+					priceMuffins, priceCroissants, priceBiscuits);
 
 
 		// If user select Bakery
@@ -59,9 +65,9 @@ public class testStore {
 			total = total + objBakery.discountBakery(objBakery.calcBakeryPrice(priceMuffins, priceCroissants, priceBiscuits), age);
 			
 			Bakery = objBakery.printBakery();
-			options(age, priceMilk, 
-					priceCheese, priceButter, priceMuffins,
-					priceCroissants, priceBiscuits);
+			options(age, 
+					priceMilk, priceCheese, priceButter, 
+					priceMuffins, priceCroissants, priceBiscuits);
 
 		// If user select exit
 		}else if (option == 0) {
@@ -92,12 +98,13 @@ public class testStore {
 		// If user select wrong option
 		}else {
 			System.out.print("Please select the correct option from menu");
-			options(age, priceMilk, 
-					priceCheese, priceButter, priceMuffins,
-					priceCroissants, priceBiscuits);
+			options(age, 
+					priceMilk, priceCheese, priceButter, 
+					priceMuffins, priceCroissants, priceBiscuits);
 		}
 	}
 	
+	// This method return int
 	// This method check if user enter incorrect values
 	// Set value -> -1
 	public static int Check(String text, int min, int max, int value) {
@@ -106,47 +113,57 @@ public class testStore {
 			value = input.nextInt();
 			Check(text, min, max, value);
 		}else return value;
-		
 		return value;
-		
+	}
+	
+	// This method return double
+	// This method check if user enter incorrect values
+	// Set value -> -1
+	public static double CheckD(String text, int min, int max, double value) {
+		if (value < min || value > max) {
+			System.out.print(text);
+			value = input.nextDouble();
+			CheckD(text, min, max, value);
+		}else return value;
+		return value;
 	}
 	
 	
 	public static void main(String[] args) {
 		// Vars
-		
+
 		// Local vars
 		int day, age;
 		double priceMilk, priceCheese, priceButter, priceMuffins, priceCroissants, priceBiscuits;		
-		
+
 		// Welcome msg and ask user to enter day, age, price of milk, price of cheese, price of butter, price of muffins, price of croissants and price of biscuits.
 		// After that, ask user to choose one option.
 		System.out.print("****************************************************************\n" + 
 						 "**                Welcome to the CSC 111 store                **\n" + 
 						 "****************************************************************\n");
-		
+
 		// Method Check(String text, int min, int max, int value)
 		// This method check if user enter incorrect values
-		
+
 		day = Check("Please enter the day: 1-Sunday, 2-Monday, so on till 7-Saturday: ", 0, 7, -1);
-						
+
 		age = Check("Please enter coustmer age: ", 0, 150, -1);
 
-		priceMilk = Check("Enter today's price of milk-> ", 0, 100, -1);
-				
-		priceCheese = Check("Enter today's price of cheese-> ", 0, 999, -1);
-				
-		priceButter = Check("Enter today's price of butter-> ", 0, 999, -1);
-				
-		priceMuffins = Check("Enter today's price of muffin-> ", 0, 999, -1);
-				
-		priceCroissants = Check("Enter today's price of crosissants-> ", 0, 999, -1);
+		priceMilk = CheckD("Enter today's price of milk-> ", 0, 100, -1);
 
-		priceBiscuits = Check("Enter today's price of biscuit-> ", 0, 999, -1);
-				
-		options(age, priceMilk, 
-				priceCheese, priceButter, priceMuffins,
-				priceCroissants, priceBiscuits);
+		priceCheese = CheckD("Enter today's price of cheese-> ", 0, 999, -1);
+
+		priceButter = CheckD("Enter today's price of butter-> ", 0, 999, -1);
+
+		priceMuffins = CheckD("Enter today's price of muffin-> ", 0, 999, -1);
+
+		priceCroissants = CheckD("Enter today's price of crosissants-> ", 0, 999, -1);
+
+		priceBiscuits = CheckD("Enter today's price of biscuit-> ", 0, 999, -1);
+
+		options(age, 
+				priceMilk, priceCheese, priceButter, 
+				priceMuffins, priceCroissants, priceBiscuits);
 
 	}
 
