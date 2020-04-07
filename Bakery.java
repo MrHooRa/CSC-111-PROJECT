@@ -21,11 +21,9 @@ public class Bakery {
 
 	// Setter methods
 	public void prices(double priceMuffins, double priceCroissants, double priceBiscuits) {
-
 		this.priceMuffins = priceMuffins;
 		this.priceCroissants = priceCroissants;
 		this.priceBiscuits = priceBiscuits;
-
 	}
 
 	public Bakery(int numMuffins, int numCroissants, int numBiscuits) {
@@ -33,18 +31,18 @@ public class Bakery {
 		this.numCroissants = numCroissants;
 		this.numBiscuits = numBiscuits;
 	}
-	
+
 	public void age(int age) {
 		this.age = age;
 	}
-	
+
+	// Calculate bakery price 
 	public double calcBakeryPrice(double priceMuffins, double priceCroissants, double priceBiscuits) {
 		double total;
 		
 		priceMuffins = this.numMuffins * this.priceMuffins;
 		priceCroissants = this.numCroissants * this.priceCroissants;
 		priceBiscuits = this.numBiscuits * this.priceBiscuits;
-		
 		total = priceMuffins + priceCroissants + priceBiscuits;
 		
 		return total;
@@ -58,13 +56,12 @@ public class Bakery {
 		return total;
 	}
 
+	//return bakery
 	public String printBakery() {
-		
 		String output = "\n|\t" + this.numMuffins + " - Muffins for " + priceMuffins + "\t\t|"
 				 + "\n|\t" + this.numCroissants + " - Croissants for " + priceCroissants + "\t\t|"
 				 + "\n|\t" + this.numBiscuits + " - Biscuits for " + priceBiscuits + "\t\t|";
 		return output;
-		
 	}
 
 }
