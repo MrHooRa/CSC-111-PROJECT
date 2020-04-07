@@ -112,7 +112,7 @@ public class testStore {
 			Check(text, min, max, value);
 		}else return value;
 		
-		return 0;
+		return value;
 		
 	}
 	
