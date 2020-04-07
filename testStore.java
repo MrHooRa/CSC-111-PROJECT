@@ -1,8 +1,3 @@
-/*
-* Salman Alessa
-* UID: 439100011
-*/
-//Packages
 import java.util.Scanner;
 public class testStore {
 	static Scanner input = new Scanner(System.in);
