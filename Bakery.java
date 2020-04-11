@@ -11,7 +11,6 @@ public class Bakery {
 	private int numMuffins;
 	private int numCroissants;
 	private int numBiscuits;
-	private int age;
 	private double priceMuffins;
 	private double priceCroissants;
 	private double priceBiscuits;
@@ -30,10 +29,6 @@ public class Bakery {
 		this.numMuffins = numMuffins;
 		this.numCroissants = numCroissants;
 		this.numBiscuits = numBiscuits;
-	}
-
-	public void age(int age) {
-		this.age = age;
 	}
 
 	// Calculate bakery price 
@@ -59,8 +54,8 @@ public class Bakery {
 	//return bakery
 	public String printBakery() {
 		String output = "\n|\t" + this.numMuffins + " - Muffins for " + priceMuffins + "\t\t|"
-				 + "\n|\t" + this.numCroissants + " - Croissants for " + priceCroissants + "\t\t|"
-				 + "\n|\t" + this.numBiscuits + " - Biscuits for " + priceBiscuits + "\t\t|";
+				 	  + "\n|\t" + this.numCroissants + " - Croissants for " + priceCroissants + "\t\t|"
+				 	  + "\n|\t" + this.numBiscuits + " - Biscuits for " + priceBiscuits + "\t\t|";
 		return output;
 	}
 
