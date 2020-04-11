@@ -86,7 +86,7 @@ public class testStore {
 				System.out.print(
 						  "\n  Thanks  for  shopping,  Come  again!!"
 						+ "\n\n*  Your purchase detail is as follows   *"
-						+ "\n\n| - - - - - - - - - - - - - - - - - - - |"
+						+ "\n| - - - - - - - - - - - - - - - - - - - |"
 						+ Dairy
 						+ "\n|\t\t\t\t\t|"
 						+ Bakery
@@ -103,15 +103,15 @@ public class testStore {
 					priceMuffins, priceCroissants, priceBiscuits);
 		}
 	}
-	
-	// This method return int
+
+	// This method return integer
 	// This method check if user enter incorrect values
 	// Set value -> -1
-	public static int Check(String text, int min, int max, int value) {
+	public static int CheckI(String text, int min, int max, int value) {
 		if (value < min || value > max) {
 			System.out.print(text);
 			value = input.nextInt();
-			Check(text, min, max, value);
+			CheckI(text, min, max, value);
 		}else return value;
 		return value;
 	}
@@ -128,10 +128,7 @@ public class testStore {
 		return value;
 	}
 	
-	
 	public static void main(String[] args) {
-		// Vars
-
 		// Local vars
 		int day, age;
 		double priceMilk, priceCheese, priceButter, priceMuffins, priceCroissants, priceBiscuits;		
@@ -145,9 +142,9 @@ public class testStore {
 		// Method Check(String text, int min, int max, int value)
 		// This method check if user enter incorrect values
 
-		day = Check("Please enter the day: 1-Sunday, 2-Monday, so on till 7-Saturday: ", 0, 7, -1);
+		day = CheckI("Please enter the day: 1-Sunday, 2-Monday, so on till 7-Saturday: ", 0, 7, -1);
 
-		age = Check("Please enter coustmer age: ", 0, 150, -1);
+		age = CheckI("Please enter coustmer age: ", 0, 150, -1);
 
 		priceMilk = CheckD("Enter today's price of milk-> ", 0, 100, -1);
 
