@@ -11,7 +11,6 @@ public class Dairy {
 	private int numMilk;
 	private int numCheese;
 	private int numButter;
-	private int age;
 	private double priceMilk;
 	private double priceCheese;
 	private double priceButter;
@@ -30,10 +29,6 @@ public class Dairy {
 		this.numMilk = numMilk;
 		this.numCheese = numCheese;
 		this.numButter = numButter;
-	}
-
-	public void age(int age) {
-		this.age = age;
 	}
 
 	// Calculate dairy price 
