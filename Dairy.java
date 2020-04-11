@@ -59,8 +59,8 @@ public class Dairy {
 	//return dairy
 	public String printDairy() {
 		String output = "\n|\t" + this.numMilk + " - Milk for " + priceMilk + "\t\t|"
-				 + "\n|\t" + this.numCheese + " - Cheese for " + priceCheese + "\t\t|"
-				 + "\n|\t" + this.numButter + " - Butter for " + priceButter + "\t\t|";
+				 	  + "\n|\t" + this.numCheese + " - Cheese for " + priceCheese + "\t\t|"
+				 	  + "\n|\t" + this.numButter + " - Butter for " + priceButter + "\t\t|";
 		return output;	
 	}
 
